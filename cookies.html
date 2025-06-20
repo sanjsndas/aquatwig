@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | AquaTwig</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --secondary: #8BC34A;
+            --accent: #00BCD4;
+            --light: #F1F8E9;
+            --dark: #2E7D32;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.9), rgba(0, 188, 212, 0.8)), 
+                        url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .irrigation-icon {
+            color: var(--accent);
+            font-size: 2rem;
+        }
+        
+        .cookie-point {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .cookie-point:hover {
+            transform: translateY(-5px);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .highlight-box {
+            border-left: 4px solid var(--primary);
+            background-color: rgba(76, 175, 80, 0.05);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 1.5rem;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .cookie-consent.show {
+            display: block;
+        }
+        
+        .cookie-toggle {
+            display: none;
+        }
+        
+        .cookie-toggle + label {
+            position: relative;
+            padding-left: 50px;
+            cursor: pointer;
+        }
+        
+        .cookie-toggle + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 24px;
+            border-radius: 12px;
+            background: #ddd;
+            transition: background 0.3s;
+        }
+        
+        .cookie-toggle + label:after {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            transition: left 0.3s;
+        }
+        
+        .cookie-toggle:checked + label:before {
+            background: var(--primary);
+        }
+        
+        .cookie-toggle:checked + label:after {
+            left: 18px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-tint irrigation-icon"></i>
+                    <span class="text-2xl font-bold text-gray-800">Aqua<span class="text-green-500">Twig</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+                </div>
+                <button class="md:hidden text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Cookie <span class="text-blue-200">Policy</span></h1>
+            <p class="text-xl md:text-2xl mb-8">How we use cookies and similar technologies on our website</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction</h2>
+                    <p class="text-gray-600 mb-4">This Cookie Policy explains what cookies are, how AquaTwig uses them, and your choices regarding cookies. By using our website, you consent to the use of cookies in accordance with this policy. Cookies are small pieces of text sent to your browser when you visit our site, helping us remember information about your visit.</p>
+                    <p class="text-gray-600 mb-4">We use both session cookies (which expire when you close your browser) and persistent cookies (which stay on your device until they expire or you delete them). This policy covers all technologies that store or access information on your device, including cookies, local storage, and tracking pixels.</p>
+                    <p class="text-gray-600">Our website uses different types of cookies for various purposes, including essential functionality, performance tracking, and marketing. Some cookies are placed by third-party services that appear on our pages. You can control or delete cookies through your browser settings, though this may affect website functionality.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3 class="text-xl font-semibold mb-3">Key Principles</h3>
+                    <p class="text-gray-600">We are committed to transparency about our cookie usage. We only use cookies that are necessary for website functionality, and we obtain your consent for optional cookies. Our cookie practices comply with applicable privacy laws, including the GDPR and CCPA. We regularly review our cookie usage to ensure it aligns with our privacy commitments.</p>
+                </div>
+
+                <!-- Cookie Points -->
+                <h2 class="text-3xl font-bold mb-8 text-gray-800">Detailed Cookie Information</h2>
+
+                <!-- Point 1 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">1. What Are Cookies?</h3>
+                    <p class="text-gray-600">Cookies are small text files placed on your device when you visit websites. They serve various purposes like enabling basic functionality, remembering preferences, and analyzing site traffic. Cookies are not programs and cannot execute code or deliver viruses. They typically contain anonymous unique identifiers and information about your browsing session. Most websites use cookies to provide better user experiences. Some cookies are set by the site you're visiting (first-party), while others come from third-party services embedded in the site. Cookies can be temporary (session) or remain on your device for longer periods (persistent). Modern web technologies include similar tracking methods like local storage and pixels that function similarly to cookies.</p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">2. Essential Cookies</h3>
+                    <p class="text-gray-600">Essential cookies are strictly necessary for our website to function properly. These include cookies that enable core functionality like page navigation and access to secure areas. Without these cookies, services you request cannot be provided. Examples include session cookies that maintain your logged-in state as you move between pages, shopping cart cookies that remember your selections, and security cookies that protect against cross-site request forgery. These cookies don't collect personal information and are exempt from consent requirements under privacy laws. We don't use these cookies for marketing or tracking purposes. You can block them through browser settings, but this may severely impact your ability to use our site.</p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">3. Performance Cookies</h3>
+                    <p class="text-gray-600">Performance cookies help us understand how visitors interact with our website by collecting anonymous information. These cookies allow us to count visits and traffic sources to measure and improve performance. They help us know which pages are most and least popular and how visitors move around the site. All information these cookies collect is aggregated and anonymous. They include analytics cookies from services like Google Analytics that track page load times, navigation paths, and interaction metrics. While not essential, these cookies provide valuable insights that help us optimize content and user experience. If you don't allow these cookies, we won't know when you've visited our site or how you used it.</p>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">4. Functional Cookies</h3>
+                    <p class="text-gray-600">Functional cookies enable enhanced features and personalization. These may be set by us or third-party providers whose services we've added to our pages. They remember choices you make (like language or region preferences) to provide more personalized features. Examples include cookies that remember your login credentials (if you choose that option), maintain your preferences across visits, or enable embedded content like videos. These cookies cannot track your browsing activity on other websites. While they make the website more convenient to use, the site will still function without them. Some functionality may be reduced if you disable these cookies, but core features will remain available.</p>
+                </div>
+
+                <!-- Point 5 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">5. Targeting/Advertising Cookies</h3>
+                    <p class="text-gray-600">Targeting cookies may be set through our site by advertising partners to build a profile of your interests. They work by uniquely identifying your browser and device to show you relevant ads on other sites. These cookies track your online activity and share that information with other organizations like advertisers. They are usually persistent cookies that remain until you delete them or they expire. We use these cookies only with your explicit consent, which you can manage through our cookie preference center. Disabling these cookies won't stop advertising, but it will make ads less relevant to you. These cookies may be used by social media platforms to track visitors across websites for targeted advertising purposes.</p>
+                </div>
+
+                <!-- Point 6 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">6. Third-Party Cookies</h3>
+                    <p class="text-gray-600">Third-party cookies are set by domains other than aquatwig.com when you visit our site. These come from services embedded in our pages like analytics, social media plugins, and advertising networks. They may track your browsing across multiple sites to build a profile of your interests. Common third-party cookies include Google Analytics for traffic measurement, Facebook Pixel for ad targeting, and YouTube cookies for embedded videos. These cookies are subject to the respective privacy policies of the third parties. We carefully vet third-party services to ensure they meet our privacy standards. You can control these cookies through your browser settings or our cookie consent tool.</p>
+                </div>
+
+                <!-- Point 7 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">7. Cookie Duration</h3>
+                    <p class="text-gray-600">Cookies have varying lifespans depending on their purpose. Session cookies expire when you close your browser, while persistent cookies remain until their expiration date or until you delete them. Essential cookies typically have shorter durations (hours or days), while analytics and advertising cookies may persist for months or years. We regularly review cookie expiration times to ensure they're no longer than necessary for their intended purpose. Some third-party cookies may have their own expiration schedules beyond our control. You can manually delete cookies at any time through your browser settings. Our cookie consent tool shows the duration of each cookie category when you adjust your preferences.</p>
+                </div>
+
+                <!-- Point 8 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">8. Managing Cookies</h3>
+                    <p class="text-gray-600">You can control cookies through your browser settings, which typically allow you to refuse all or some cookies, alert you when websites set cookies, and delete cookies. Popular browsers like Chrome, Firefox, Safari, and Edge provide cookie management in their privacy or security settings. Blocking all cookies may impair website functionality, so we recommend selectively disabling only non-essential categories. Our cookie consent tool lets you customize which optional cookies to accept. Be aware that clearing cookies will remove your preferences and may log you out of services. Some browsers offer private browsing modes that don't save cookies after you close the window. For comprehensive privacy protection, consider browser extensions that block tracking.</p>
+                </div>
+
+                <!-- Point 9 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">9. Do Not Track Signals</h3>
+                    <p class="text-gray-600">Some browsers offer a "Do Not Track" (DNT) feature that sends signals to websites requesting not to be tracked. Currently, there's no industry standard for how to respond to DNT signals, so our systems don't currently recognize or respond to DNT requests. However, we provide equivalent opt-out controls through our cookie consent tool where you can disable tracking cookies. We're monitoring developments around DNT technology and may implement support if a standard emerges. In the meantime, our cookie policy provides transparency about tracking practices, and our consent mechanisms give you control over data collection. You can achieve similar privacy protection by adjusting your cookie preferences or using privacy-focused browser extensions.</p>
+                </div>
+
+                <!-- Point 10 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">10. GDPR Compliance</h3>
+                    <p class="text-gray-600">For visitors from the European Economic Area, we comply with the General Data Protection Regulation (GDPR) regarding cookies. This means we only place non-essential cookies after obtaining your explicit consent. Our cookie banner clearly explains cookie purposes and provides granular control over categories. You can withdraw consent at any time through our cookie settings. We document consent and make our cookie policy easily accessible. Data collected through cookies is processed according to our Privacy Policy, with appropriate safeguards for international transfers. We conduct Data Protection Impact Assessments for high-risk processing activities. European users have rights to access, rectify, or erase personal data collected via cookies, which can be exercised through our Data Request Form.</p>
+                </div>
+
+                <!-- Point 11 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">11. CCPA Compliance</h3>
+                    <p class="text-gray-600">For California residents, we comply with the California Consumer Privacy Act (CCPA) regarding cookie usage. Under CCPA, cookies that identify particular consumers or devices may constitute "personal information." We provide a "Do Not Sell My Personal Information" link in our footer that allows opting out of cookie-based data sales. Our cookie policy discloses categories of personal information collected and purposes for collection. California consumers can request access to or deletion of personal information collected through cookies. We don't discriminate against users who exercise CCPA rights. While we don't currently sell personal data as our primary business model, some third-party cookies may involve data sharing that qualifies as a "sale" under CCPA's broad definition. Our cookie consent tool helps California residents manage these preferences.</p>
+                </div>
+
+                <!-- Point 12 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">12. Cookie Consent Mechanism</h3>
+                    <p class="text-gray-600">We use a cookie consent management platform that meets regulatory requirements. When you first visit, a banner explains our cookie usage and requests consent for non-essential cookies. The tool allows granular control by cookie category (essential, performance, functional, targeting). Consent preferences are stored in a cookie so we remember your choices, though you may need to renew consent periodically. The tool blocks non-essential cookies until consent is given and provides transparency about which cookies are active. You can adjust preferences anytime through our cookie settings link. The system logs consent for compliance purposes and automatically honors do-not-track browser settings where supported. We regularly audit the tool to ensure it functions correctly and complies with evolving regulations.</p>
+                </div>
+
+                <!-- Point 13 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">13. Analytics Cookies</h3>
+                    <p class="text-gray-600">Our analytics cookies help us understand website usage patterns to improve content and navigation. We use Google Analytics with IP anonymization enabled, meaning your full IP address isn't stored. Analytics cookies track metrics like page views, time on site, and referral sources in aggregate form. The data helps identify popular content, optimize page layouts, and measure marketing campaign effectiveness. We've configured analytics to respect do-not-track signals where possible and to automatically expire after 14 months. You can opt out of analytics tracking through our cookie settings or by installing the Google Analytics Opt-out Browser Add-on. Analytics data is retained for 26 months before automatic deletion, though reports containing aggregated data may be kept longer.</p>
+                </div>
+
+                <!-- Point 14 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">14. Social Media Cookies</h3>
+                    <p class="text-gray-600">Social media cookies are set by platforms like Facebook, Twitter, and LinkedIn when you interact with their content on our site. These enable features like sharing buttons and embedded feeds. Social media companies may use these cookies to track your visits across websites that use their services, building a profile of your interests for targeted advertising. We don't control these cookies and they're subject to each platform's privacy policy. Some social plugins may activate even if you don't click them, unless you've opted out through the respective platform. We minimize social media cookies by using privacy-enhanced sharing links where possible. You can manage these cookies through our consent tool or by adjusting your social media account privacy settings.</p>
+                </div>
+
+                <!-- Point 15 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">15. Advertising Cookies</h3>
+                    <p class="text-gray-600">Our advertising cookies help deliver relevant online ads and measure ad campaign performance. These may include Google Ads cookies for pay-per-click tracking, Facebook Pixel for retargeting, and affiliate marketing cookies that track referrals. Advertising cookies track conversions, optimize ad delivery, and build audience segments based on browsing behavior. We use these cookies only with explicit consent and provide clear opt-out mechanisms. Even with consent, we limit data sharing with advertisers to protect privacy. You may still see generic ads if you opt out of targeting cookies. We participate in industry self-regulation programs like the Digital Advertising Alliance and provide opt-out links to their consumer choice tools. Our ads don't use sensitive personal data categories for targeting.</p>
+                </div>
+
+                <!-- Point 16 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">16. First-Party vs Third-Party Cookies</h3>
+                    <p class="text-gray-600">First-party cookies are set by aquatwig.com and generally support core website functionality. These include session management, preference storage, and our own analytics. Third-party cookies come from domains other than aquatwig.com, typically from services we embed like analytics tools, social media, and advertising networks. First-party cookies are generally more privacy-friendly as we directly control their use. Third-party cookies can track you across multiple sites, which is why they're subject to stricter consent requirements. We minimize third-party cookies and carefully select vendors with strong privacy commitments. Our cookie consent tool distinguishes between first and third-party cookies to help you make informed choices. Some browsers now block third-party cookies by default, which may affect certain website features.</p>
+                </div>
+
+                <!-- Point 17 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">17. Cookie Security</h3>
+                    <p class="text-gray-600">We implement security measures to protect cookies from unauthorized access or tampering. Essential cookies use Secure and HttpOnly flags to prevent cross-site scripting attacks. Session cookies expire after short periods and require re-authentication for sensitive actions. We regularly audit cookie usage to identify and mitigate potential vulnerabilities. Our cookies don't store sensitive personal data like passwords or payment information directly. For logged-in users, we implement additional security measures like CSRF tokens in cookies. Third-party cookies are subject to their providers' security practices, which we vet during vendor selection. While no internet transmission is completely secure, these measures help protect your data from common web threats. We recommend keeping your browser updated for the latest security protections.</p>
+                </div>
+
+                <!-- Point 18 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">18. Cookie Expiration</h3>
+                    <p class="text-gray-600">Cookie expiration periods are set according to their purpose and legal requirements. Session cookies expire when you close your browser, while persistent cookies have defined lifespans. Essential cookies typically expire within 24 hours or when the session ends. Performance and functionality cookies generally last between 30 days and 1 year. Advertising cookies may persist for up to 2 years unless you clear them. Our cookie consent preferences are stored for 6 months before requesting renewal. We regularly review expiration periods to balance functionality needs with privacy considerations. Some third-party cookies may have longer durations set by their providers. You can manually delete cookies at any time through browser settings, though this may require resetting preferences on your next visit.</p>
+                </div>
+
+                <!-- Point 19 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">19. Local Storage & Similar Technologies</h3>
+                    <p class="text-gray-600">Beyond traditional cookies, we may use similar technologies like HTML5 Local Storage, IndexedDB, and Web SQL for storing larger amounts of data client-side. These technologies offer more storage capacity than cookies and aren't automatically transmitted with HTTP requests. We use them for features like offline functionality, caching large datasets, and storing complex preferences. Like cookies, you can clear this data through browser settings, though doing so may affect website functionality. Some browsers allow blocking specific storage mechanisms while permitting others. Our cookie policy encompasses all client-side storage technologies, not just traditional cookies. These technologies are subject to the same consent requirements as cookies under privacy laws. We implement storage access controls to prevent unauthorized data access by third parties.</p>
+                </div>
+
+                <!-- Point 20 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">20. Flash Cookies & LSOs</h3>
+                    <p class="text-gray-600">Flash cookies (Local Shared Objects or LSOs) are data files used by Adobe Flash Player to store information on your device. Unlike traditional cookies, they can store larger amounts of data and aren't managed through standard browser controls. We avoid using Flash cookies due to their privacy concerns and declining technology support. Any Flash-based content on our site uses standard HTTP cookies instead of LSOs where possible. Most modern browsers now block Flash by default, making LSOs largely obsolete. If you encounter any legacy Flash content requiring LSOs, you can manage settings through the Adobe Flash Player Settings Manager. We're phasing out all Flash-based components in favor of HTML5 alternatives that use more transparent storage mechanisms. This aligns with industry trends toward retiring Flash technology entirely.</p>
+                </div>
+
+                <!-- Point 21 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">21. Pixel Tags & Web Beacons</h3>
+                    <p class="text-gray-600">Pixel tags (or web beacons) are small, invisible images or code snippets that track user activity. Unlike cookies stored on your device, pixels transmit information when loaded in a page or email. We may use pixels to measure ad performance, track conversions, and understand usage patterns. These help determine how many people open our emails or visit specific pages after clicking ads. Pixels can recognize certain types of information like device type or IP address. We classify pixels under our cookie policy and require consent for non-essential tracking pixels. Some email clients block pixels by default, while browsers may block them through extensions or privacy settings. Our marketing emails include instructions for disabling pixel tracking if preferred. We limit pixel usage to what's necessary for measuring campaign effectiveness.</p>
+                </div>
+
+                <!-- Point 22 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">22. Mobile Device Identifiers</h3>
+                    <p class="text-gray-600">On mobile devices, apps and websites may use alternative identifiers instead of cookies. These include Advertising IDs (IDFA on iOS, AAID on Android) and device identifiers. While not technically cookies, these identifiers serve similar purposes for tracking and personalization. Our mobile apps and mobile-optimized website respect device-level opt-out settings for ad tracking. We provide in-app privacy controls comparable to our web cookie consent tools. Mobile identifiers are subject to the same privacy principles as cookies in our policies. You can typically reset or disable these identifiers through your device settings. Apple's App Tracking Transparency framework requires explicit user permission for cross-app tracking on iOS. We comply with all platform-specific requirements for mobile tracking transparency and control.</p>
+                </div>
+
+                <!-- Point 23 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">23. Cookie Auditing & Compliance</h3>
+                    <p class="text-gray-600">We conduct regular cookie audits to ensure compliance with privacy regulations and our policies. These audits identify all cookies and similar technologies active on our site, their purposes, and associated data flows. We maintain a cookie inventory documenting categories, durations, and vendors. Our legal team reviews new cookies before implementation to assess privacy impacts. We monitor for unauthorized or unexpected cookies through automated scanning tools. Compliance checks ensure proper consent mechanisms are in place and functioning correctly. Audit findings are addressed through corrective action plans when needed. We document cookie-related data processing activities in our Records of Processing Activities (ROPA) for GDPR compliance. Third-party vendors are contractually required to comply with applicable privacy laws regarding their cookies.</p>
+                </div>
+
+                <!-- Point 24 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">24. Cookie Policy Updates</h3>
+                    <p class="text-gray-600">We may update this Cookie Policy periodically to reflect changes in technology, regulations, or our practices. Significant changes will be announced through prominent website notices or direct communications when required by law. The "Last Updated" date at the top indicates when the policy was last revised. We encourage you to review the policy periodically to stay informed about our cookie usage. Continued use of our website after changes constitutes acceptance of the updated policy. Historical versions of the policy are archived and available upon request. For material changes affecting data processing, we may require renewed consent. Our cookie consent tool maintains records of which policy version was in effect when consent was given. Changes typically follow internal reviews or updates to regulatory guidance.</p>
+                </div>
+
+                <!-- Point 25 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">25. International Data Transfers</h3>
+                    <p class="text-gray-600">Some third-party cookies may involve transferring data outside your home country to servers in the United States or other locations. Where required by law, we implement appropriate safeguards for international data transfers. For GDPR-covered transfers, we rely on mechanisms like Standard Contractual Clauses or Privacy Shield certification (where valid). Our cookie consent tool discloses when cookies involve international data transfers. You can opt out of cookies that transfer data to jurisdictions without adequate privacy protections. We minimize such transfers by using regional hosting when available from service providers. Some website features may be unavailable if you opt out of essential international transfers. Our Data Transfer Impact Assessments evaluate risks associated with cookie-related data flows across borders.</p>
+                </div>
+
+                <!-- Point 26 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">26. Children's Privacy</h3>
+                    <p class="text-gray-600">We don't knowingly use cookies to collect personal information from children under 13 (or 16 in some jurisdictions) without parental consent. Our website isn't directed at children, and we don't target advertising to children. When we detect potential child users, we may apply additional cookie restrictions or disable certain tracking features. Parents can contact us to review or delete any personal data collected from their children. We comply with all applicable children's privacy laws like COPPA in the U.S. and GDPR-K in the EU. Some educational or child-directed content may use cookies only for essential functionality with parental consent where required. We encourage parents to monitor children's online activities and use browser parental controls to manage cookie settings.</p>
+                </div>
+
+                <!-- Point 27 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">27. Cookie Performance Impact</h3>
+                    <p class="text-gray-600">Cookies generally have minimal impact on website performance, typically adding milliseconds to page load times. However, excessive or poorly optimized cookies can slow down browsing. We optimize cookie usage by minimizing their size and number, combining data when possible. Third-party cookies may have greater performance impacts as they require additional network requests. Our performance monitoring tracks cookie-related latency issues. Some privacy-focused browsers that block cookies by default may actually load pages faster by skipping cookie processing. We balance functionality needs with performance considerations when implementing cookies. Heavy cookie usage can also affect browser memory usage, though modern browsers handle this efficiently. Our development team conducts performance testing to ensure cookies don't degrade user experience.</p>
+                </div>
+
+                <!-- Point 28 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">28. Cookie-Free Alternatives</h3>
+                    <p class="text-gray-600">Where possible, we implement cookie-free alternatives for common functions. These include URL parameters for session tracking, server-side storage for preferences, and IP-based geolocation instead of cookies. Some features may degrade gracefully when cookies are disabled, providing basic functionality without personalization. We're exploring emerging privacy-preserving technologies like Federated Learning of Cohorts (FLoC) as potential cookie replacements. For analytics, we sometimes use cookie-less methods like server log analysis, though these provide less detailed insights. Our mobile apps can use device storage instead of cookies for some functions. When you opt out of cookies, we attempt to maintain core functionality through these alternative methods where feasible.</p>
+                </div>
+
+                <!-- Point 29 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">29. Cookie Preferences by Device</h3>
+                    <p class="text-gray-600">Your cookie preferences are stored per-device and per-browser, meaning choices on one device don't automatically apply to others. This is because cookies are browser-specific and can't be shared across devices. You'll need to set preferences separately on each device and browser you use to access our site. Some browsers offer sync features that can share settings across signed-in instances. Our systems don't attempt to link preferences across your different devices for privacy reasons. If you use private browsing modes, preferences may reset when you close the session. Enterprise or managed devices may have organization-wide cookie policies that override individual settings. We're exploring more unified preference management solutions as technology evolves.</p>
+                </div>
+
+                <!-- Point 30 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">30. Cookie Encryption</h3>
+                    <p class="text-gray-600">We encrypt sensitive cookie data to protect it from interception or tampering. All cookies transmitted over the internet use HTTPS encryption to prevent eavesdropping. Some cookies contain encrypted tokens rather than raw data for added security. Session cookies are particularly protected as they often contain authentication details. We implement SameSite cookie attributes to prevent cross-site request forgery attacks. Secure and HttpOnly flags are set where appropriate to limit cookie access. While encryption protects cookie data in transit, cookies stored on your device aren't typically encrypted at rest. Some browsers now offer options to encrypt stored cookies, which we support where available. Our security team regularly reviews cookie encryption practices to address emerging threats.</p>
+                </div>
+
+                <!-- Point 31 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">31. Cookie Storage Limits</h3>
+                    <p class="text-gray-600">Browsers impose limits on cookie storage to prevent abuse. Typically, each cookie can be up to 4KB in size, with around 50 cookies allowed per domain (varies by browser). We design cookies to stay well under these limits, combining data when possible to minimize the total number. When approaching limits, browsers may delete older cookies to make space, which could affect your preferences. Our systems handle storage limits gracefully by regenerating essential cookies when needed. Some browsers allow adjusting storage limits through advanced settings, though we don't recommend this for most users. Modern storage mechanisms like localStorage offer larger capacities (typically 5-10MB per domain) for non-cookie data. We monitor storage usage to ensure optimal performance across all major browsers.</p>
+                </div>
+
+                <!-- Point 32 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">32. Cookie Expiration Management</h3>
+                    <p class="text-gray-600">We carefully manage cookie expiration times to balance functionality with privacy. Session cookies expire when you close your browser, while persistent cookies have specific expiration dates. Essential cookies typically have shorter durations (hours or days) to minimize data retention. Preference cookies may last several months so you don't need to reset them frequently. Analytics cookies often expire after 1-2 years unless you revisit our site. Advertising cookies may have longer durations to track campaign effectiveness. We regularly review and adjust expiration periods based on usage patterns and regulatory guidance. Some browsers allow setting global cookie expiration rules, which our systems respect where possible. Our cookie consent tool shows expiration information for each cookie category.</p>
+                </div>
+
+                <!-- Point 33 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">33. Cookie Access Control</h3>
+                    <p class="text-gray-600">We implement strict access controls for cookies containing sensitive information. Authentication cookies are protected with HttpOnly and Secure flags to prevent JavaScript access and ensure HTTPS-only transmission. SameSite attributes prevent cross-origin misuse. Server-side checks validate cookie contents to detect tampering attempts. Different website sections have varying cookie permission levels based on sensitivity. Our development follows the principle of least privilege for cookie access. Third-party scripts are restricted from accessing first-party cookies unless explicitly permitted. We conduct penetration testing to identify and fix cookie-related vulnerabilities. Access logs help detect and investigate suspicious cookie activity. These controls help prevent session hijacking, cross-site scripting, and other cookie-based attacks.</p>
+                </div>
+
+                <!-- Point 34 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">34. Cookie Performance Optimization</h3>
+                    <p class="text-gray-600">We optimize cookie usage to minimize performance impacts. Techniques include combining multiple data points into single cookies, minimizing cookie sizes, and reducing the total number of cookies. Critical cookies are set early in page loading to prevent render-blocking. We avoid unnecessary cookie updates that could trigger additional server requests. Cookie domains are scoped appropriately to prevent sending cookies to unnecessary subdomains. Static resources are served from cookie-less domains when possible. Our content delivery network helps reduce latency for cookie-related requests. Performance budgets limit the total cookie overhead per page. We monitor real user metrics to detect any cookie-related performance degradation. These optimizations help maintain fast page loads while providing cookie-based functionality.</p>
+                </div>
+
+                <!-- Point 35 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">35. Cookie Error Handling</h3>
+                    <p class="text-gray-600">Our systems handle cookie-related errors gracefully to maintain functionality. When cookies are blocked or deleted, we fall back to server-side sessions where possible. Error messages guide users to enable cookies if they're required for specific features. We log cookie errors to identify and address compatibility issues. The website remains usable even if non-essential cookies are rejected, though some personalization may be lost. For authentication cookies, we implement secure renewal mechanisms when sessions expire. Cross-browser testing ensures consistent behavior with different cookie settings. Our support team is trained to troubleshoot common cookie-related issues reported by users. These robust error handling practices provide reliable service across various cookie acceptance scenarios.</p>
+                </div>
+
+                <!-- Point 36 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">36. Cookie Policy Accessibility</h3>
+                    <p class="text-gray-600">We've designed our Cookie Policy to be accessible to all users, including those with disabilities. The document uses semantic HTML structure for screen reader compatibility. Text has sufficient color contrast for visually impaired users. Content is organized with clear headings for easy navigation. The policy is available in a machine-readable format for assistive technologies. We provide alternative contact methods for users who need help understanding cookie settings. Language is kept as clear and simple as possible without losing legal precision. The policy works with browser zoom features and responsive layouts. We regularly test accessibility with tools and user feedback to identify and fix any barriers. These efforts ensure equal access to information about our cookie practices.</p>
+                </div>
+
+                <!-- Point 37 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">37. Cookie Policy Translations</h3>
+                    <p class="text-gray-600">While our primary Cookie Policy is in English, we provide machine-translated versions in multiple languages for user convenience. These translations are clearly marked as automated and may not capture all nuances. The English version remains the legally binding document. For certain jurisdictions with language requirements, we provide professionally translated versions. Users can request specific language assistance through our support channels. We're gradually adding more human-translated versions based on user demand and regulatory requirements. Translated policies are reviewed by native speakers for accuracy. Language selection is available through our website footer. These translation efforts help make our cookie practices understandable to global users while maintaining legal precision.</p>
+                </div>
+
+                <!-- Point 38 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">38. Cookie Policy Versioning</h3>
+                    <p class="text-gray-600">We maintain version control for our Cookie Policy to track changes over time. Each update receives a new version number and date stamp. Archived versions are retained for reference and compliance purposes. Significant changes are summarized in release notes accompanying new versions. Our cookie consent system records which policy version was active when users gave consent. For material changes, we may require renewed consent under the updated policy. Version history helps demonstrate compliance with evolving regulations. Users can request previous policy versions through our Data Protection Officer. Legal and compliance teams review all policy changes before publication. This systematic versioning approach ensures transparency about how our cookie practices evolve.</p>
+                </div>
+
+                <!-- Point 39 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">39. Cookie Policy Governance</h3>
+                    <p class="text-gray-600">Our Cookie Policy is governed by cross-functional teams including Legal, Privacy, IT, and Marketing. The Privacy Committee meets quarterly to review policy effectiveness and needed updates. A designated Cookie Policy Manager oversees day-to-day implementation and compliance. Training ensures relevant staff understand policy requirements. Internal audits verify proper policy enforcement across digital properties. The Data Protection Officer provides independent oversight of cookie-related data processing. Governance documents define roles and responsibilities for policy maintenance. Escalation procedures address potential violations or disputes. This structured governance framework helps maintain compliant, user-friendly cookie practices aligned with our privacy values.</p>
+                </div>
+
+                <!-- Point 40 -->
+                <div class="cookie-point p-6">
+                    <h3 class="text-xl font-semibold mb-3">40. Contacting Us About Cookies</h3>
+                    <p class="text-gray-600">For questions about our Cookie Policy or practices, contact our Data Protection Officer at dpo@aquatwig.com or by mail: AquaTwig Inc., Attn: Data Protection Officer, 100 Bleecker St, New York, NY 10013, USA. For general cookie-related inquiries, email privacy@aquatwig.com or call (212) 555-1234 during business hours. When contacting us about cookies, please specify the nature of your inquiry and any relevant details like browser type or cookie names. Our support team can guide you through adjusting cookie settings or exercising privacy rights. For complex requests, we may need to verify your identity before responding. We aim to respond to all cookie-related inquiries within 5 business days. Your feedback helps us improve our cookie transparency and controls.</p>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="text-2xl font-semibold mb-4">Effective Date</h3>
+                    <p class="text-gray-600">This Cookie Policy was last updated on July 1, 2023 and is effective as of that date.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-tint irrigation-icon"></i>
+                        <span class="text-2xl font-bold ml-2">Aqua<span class="text-green-400">Twig</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-xs">Innovative irrigation solutions for urban spaces and small gardens.</p>
+                    <p class="text-gray-400">100 Bleecker St, New York, NY 10013, USA</p>
+                    <p class="text-gray-400 mt-2">Phone: (212) 555-1234</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-400 hover:text-green-400 transition duration-300">Home</a></li>
+                            <li><a href="index.html#services" class="text-gray-400 hover:text-green-400 transition duration-300">Services</a></li>
+                            <li><a href="index.html#about" class="text-gray-400 hover:text-green-400 transition duration-300">About Us</a></li>
+                            <li><a href="index.html#testimonials" class="text-gray-400 hover:text-green-400 transition duration-300">Feedback</a></li>
+                            <li><a href="index.html#tips" class="text-gray-400 hover:text-green-400 transition duration-300">Tips</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="privacy.html" class="text-gray-400 hover:text-green-400 transition duration-300">Privacy Policy</a></li>
+                            <li><a href="terms.html" class="text-gray-400 hover:text-green-400 transition duration-300">Terms & Conditions</a></li>
+                            <li><a href="cookies.html" class="text-gray-400 hover:text-green-400 transition duration-300">Cookie Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-green-400 transition duration-300">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-700 p-3 rounded-full text-gray-300 hover:bg-green-500 hover:text-white transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-gray-700 p-3 rounded-full text-gray-300 hover:bg-green-500 hover:text-white transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-gray-700 p-3 rounded-full text-gray-300 hover:bg-green-500 hover:text-white transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-gray-700 p-3 rounded-full text-gray-300 hover:bg-green-500 hover:text-white transition duration-300">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 AquaTwig. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Dialog -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 md:mr-8">
+                    <p class="text-white">We use cookies to enhance your experience on our website. By clicking "Accept", you consent to our use of cookies. <a href="cookies.html" class="text-green-300 hover:text-green-100 underline">Learn more</a></p>
+                </div>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 w-full md:w-auto">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="necessaryToggle" class="cookie-toggle" checked disabled>
+                        <label for="necessaryToggle" class="text-white">Necessary</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="preferencesToggle" class="cookie-toggle">
+                        <label for="preferencesToggle" class="text-white">Preferences</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="analyticsToggle" class="cookie-toggle">
+                        <label for="analyticsToggle" class="text-white">Analytics</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="marketingToggle" class="cookie-toggle">
+                        <label for="marketingToggle" class="text-white">Marketing</label>
+                    </div>
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <button id="acceptAllCookies" class="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 transition duration-300">Accept All</button>
+                        <button id="acceptSelectedCookies" class="bg-gray-700 text-white px-6 py-2 rounded hover:bg-gray-600 transition duration-300">Accept Selected</button>
+                        <button id="rejectNonEssentialCookies" class="bg-gray-700 text-white px-6 py-2 rounded hover:bg-gray-600 transition duration-300">Reject Non-Essential</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            const navLinks = document.querySelector('.md\\:flex');
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+            navLinks.classList.toggle('flex-col');
+            navLinks.classList.toggle('absolute');
+            navLinks.classList.toggle('top-16');
+            navLinks.classList.toggle('left-0');
+            navLinks.classList.toggle('right-0');
+            navLinks.classList.toggle('bg-white');
+            navLinks.classList.toggle('shadow-lg');
+            navLinks.classList.toggle('px-6');
+            navLinks.classList.toggle('py-4');
+            navLinks.classList.toggle('space-y-4');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navLinks = document.querySelector('.md\\:flex');
+                    if(!navLinks.classList.contains('hidden') && window.innerWidth < 768) {
+                        navLinks.classList.add('hidden');
+                        navLinks.classList.remove('flex');
+                    }
+                }
+            });
+        });
+
+        // Cookie Consent Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptAllBtn = document.getElementById('acceptAllCookies');
+            const acceptSelectedBtn = document.getElementById('acceptSelectedCookies');
+            const rejectNonEssentialBtn = document.getElementById('rejectNonEssentialCookies');
+            
+            // Check if consent was already given
+            if (!localStorage.getItem('cookieConsent')) {
+                cookieConsent.classList.add('show');
+            }
+            
+            // Accept All Cookies
+            acceptAllBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'all');
+                cookieConsent.classList.remove('show');
+                // In a real implementation, you would set all cookies here
+            });
+            
+            // Accept Selected Cookies
+            acceptSelectedBtn.addEventListener('click', function() {
+                const preferences = document.getElementById('preferencesToggle').checked;
+                const analytics = document.getElementById('analyticsToggle').checked;
+                const marketing = document.getElementById('marketingToggle').checked;
+                
+                localStorage.setItem('cookieConsent', 'selected');
+                localStorage.setItem('cookiePrefs', JSON.stringify({
+                    preferences: preferences,
+                    analytics: analytics,
+                    marketing: marketing
+                }));
+                
+                cookieConsent.classList.remove('show');
+                // In a real implementation, you would set cookies based on selections
+            });
+            
+            // Reject Non-Essential Cookies
+            rejectNonEssentialBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'necessary');
+                cookieConsent.classList.remove('show');
+                // In a real implementation, you would only set necessary cookies
+            });
+        });
+    </script>
+</body>
+</html>
